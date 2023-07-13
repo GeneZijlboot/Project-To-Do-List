@@ -1,3 +1,14 @@
 body{
-    background-color: orange;
+    background-color:#1d4d5f;
+    display: flex;
+    justify-content: center;
+    margin-top: 8%;
+}
+
+#App{
+    box-shadow: 5px 5px 12px #042937;
+    border-radius: 25px;
+    background-color:#2596be;
+    height: 550px;
+    width: 900px;
 }
