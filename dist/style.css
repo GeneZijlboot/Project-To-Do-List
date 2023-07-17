@@ -11,7 +11,7 @@ body{
 
 #Screen{
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 0.8fr 3fr;
     height: 550px;
     width: 900px;
     box-shadow: 5px 5px 12px #042937;
@@ -26,6 +26,8 @@ body{
 }
 
 #ToDoNotes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     background-color: #1d4d5f;
     border-radius: 25px;
     margin: 25px;
@@ -34,11 +36,13 @@ body{
     overflow-y: scroll;
 }
 
-#txt{
-    color:white;
-    margin: auto;
-    padding: 20px;
-    font-size: 20px;
+#ToDo{
+    margin: 10px;
+    text-align: center;
+    background-color: #2596be;
+    border-radius: 25px;
+    width: 200px;
+    height: 200px;
 }
 
 #MadeBy, a{
