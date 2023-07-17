@@ -1,14 +1,34 @@
 body{
     background-color:#1d4d5f;
-    display: flex;
-    justify-content: center;
-    margin-top: 8%;
+    margin-top: 7%;
+    font-family: Helvetica;
 }
 
 #App{
+    display: flex;
+    justify-content: center;
+}
+
+#Screen{
+    height: 550px;
+    width: 900px;
     box-shadow: 5px 5px 12px #042937;
     border-radius: 25px;
     background-color:#2596be;
-    height: 550px;
-    width: 900px;
+}
+
+#TaskBar{
+    margin: 15px;
+    color: snow;
+    font-size: 25px;
+}
+
+#MadeBy, a{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
 }
