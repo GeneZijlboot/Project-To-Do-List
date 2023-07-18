@@ -4,6 +4,7 @@ export function AddProject(){
     const Projects = document.createElement('p');
     const AddTaskButton = document.createElement('button')
     const Form = document.createElement('form');
+    const resetbtn = document.createElement('button');
     
 
     AddTaskButton.id = "AddTaskButton";
@@ -25,7 +26,6 @@ export function AddProject(){
         const ProjectName = document.createElement('input');
         const buttonsstyle = document.createElement('div');
         const submitbtn = document.createElement('input');
-        const resetbtn = document.createElement('input');
 
         ProjectName.id = "input";
         buttonsstyle.id = "buttonsstyle";
@@ -34,6 +34,7 @@ export function AddProject(){
 
 
         ProjectName.placeholder = "ProjectName";
+        resetbtn.textContent = "cancel";
 
         submitbtn.type = "submit";
         resetbtn.type = "reset";
@@ -42,9 +43,12 @@ export function AddProject(){
         Form.appendChild(buttonsstyle);
         buttonsstyle.appendChild(submitbtn);
         buttonsstyle.appendChild(resetbtn);
+        AddProject.disabled = true;
+    })
 
-        resetbtn.addEventListener('click', () => {
-            TaskBar.removeChild(Form);
-        })
+
+    resetbtn.addEventListener('click', () => {
+        TaskBar.removeChild(Form);
+        AddProject.disabled = false;
     })
 }
