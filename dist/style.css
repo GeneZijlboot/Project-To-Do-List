@@ -20,15 +20,32 @@ body{
 }
 
 #TaskBar{
-    margin: 15px;
+    background-color: #2084a8;
+    padding-left: 25px;
+    border-start-start-radius: 25px;
+    border-end-start-radius: 25px;
     color: snow;
-    font-size: 25px;
+    font-size: 30px;
+}
+
+#AddTaskButton{
+    font-size: 15px;
+    width: 120px;
+    cursor: pointer;
+}
+
+#devider{
+    background-color: snow;
+    border-radius: 25px;
+    margin-top: 25px;
+    height: 500px;
+    width: 10px;
 }
 
 #ToDoNotes{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    background-color: #1d4d5f;
+    background-color: #2596be;
     border-radius: 25px;
     margin: 25px;
     height: 500px;
@@ -39,10 +56,68 @@ body{
 #ToDo{
     margin: 10px;
     text-align: center;
-    background-color: #2596be;
+    background-color: snow;
+    box-shadow: 2px 3px 5px #042937;
     border-radius: 25px;
     width: 200px;
-    height: 200px;
+    height: 300px;
+}
+
+#NewTask{
+    border: 5px white solid;
+    color: white;
+    border-radius: 25px;
+    text-align: center;
+    align-self: center;
+    margin-left: 240px;
+    padding: 10px;
+    width: 200px;
+    height: 260px;
+    background-color:#2084a8;
+}
+
+#AddTaskform{
+    display: grid;
+}
+
+#AddProjectFrom{
+    display: grid;
+    margin-top: 20px;
+    margin-right: 20px;
+    gap: 5px;
+}
+
+#buttons{
+    cursor: pointer;
+    color:black;
+    background-color: snow;
+    border: 1px solid snow;
+    border-radius: 25px;
+}
+
+#SubmitButton{
+    cursor: pointer;
+    color:black;
+    background-color: snow;
+    border: 1px solid snow;
+    border-radius: 25px;
+    font-size: 20px;
+}
+
+#AddTaskButton{
+    font-size: 20px;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    color:black;
+    background-color: snow;
+    border: 1px solid snow;
+    border-radius: 25px;
+}
+
+#buttonsstyle{
+    display: flex;
+    gap: 5px;
 }
 
 #MadeBy, a{

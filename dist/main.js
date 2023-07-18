@@ -1,1 +1,1 @@
-console.log("test");
+(()=>{"use strict";document.getElementById("AddTaskButton").addEventListener("click",(()=>{console.log("test test tes paardepoep")}))})();

@@ -7,85 +7,47 @@
     </head>
     <body>
         <div id="App">
-            <div id="Screen">
+            <div id="Screen">   
                 <div id="TaskBar">
-                    <p>Add Project</p>
+                    <p>Projects</p>
+                    <button id="AddTaskButton">+ Add Project</button>
+                    <form id="AddProjectFrom">
+                        <input type="text" id="ProjectName" name="ProjectName" placeholder="Project Name" required>
+                        <div id="buttonsstyle">
+                            <input id="buttons" type="submit">
+                            <input id="buttons" type="reset">
+                        </div>
+                    </form>
                 </div>
+                <div id="NewTask">
+                    <form id="AddTaskform">
+                        <h2 class="text">New Task</h2>
+                        <input type="text" id="Title" name="Title" placeholder="Title" required>
+                        <br>
+                        <input type="text" id="Description" name="Description" placeholder="Description" required>
+                        <br>
+                        <div style="display:flex;"><label for="DueDate">Due Date</label><input type="date" id="DueDate" name="DueDate" required></div>
+                        <br>
+                        <div>
+                            <label for="Priority">Priority</label>
+                            <select id="Priority" name="Priority">
+                                <option value="Low">Low</option>
+                                <option value="Medium">Medium</option>
+                                <option value="High">High</option>
+                            </select>
+                        </div>
+                        <br>
+                        <input style="cursor: pointer;" type="submit" id="SubmitButton">
+                    </form>
+                </div>
+                <!--
                 <div id="ToDoNotes">
-
-                    <div id="ToDo">
-                        <p>test</p>
-                    </div>
-
-                    <div id="ToDo">
-                        <p>test</p>
-                    </div>
-                    
-                    <div id="ToDo">
-                        <p>test</p>
-                    </div>
-
-                    <div id="ToDo">
-                        <p>test</p>
-                    </div>
-
-                    <div id="ToDo">
-                        <p>test</p>
-                    </div>
-                    
-                    <div id="ToDo">
-                        <p>test</p>
-                    </div>
-
-                    <div id="ToDo">
-                        <p>test</p>
-                    </div>
-
-                    <div id="ToDo">
-                        <p>test</p>
-                    </div>
-                    
-                    <div id="ToDo">
-                        <p>test</p>
-                    </div>
-
-                    <div id="ToDo">
-                        <p>test</p>
-                    </div>
-
-                    <div id="ToDo">
-                        <p>test</p>
-                    </div>
-                    
-                    <div id="ToDo">
-                        <p>test</p>
-                    </div>
-
-                    <div id="ToDo">
-                        <p>test</p>
-                    </div>
-
-                    <div id="ToDo">
-                        <p>test</p>
-                    </div>
-                    
-                    <div id="ToDo">
-                        <p>test</p>
-                    </div>
-
-                    <div id="ToDo">
-                        <p>test</p>
-                    </div>
-
-                    <div id="ToDo">
-                        <p>test</p>
-                    </div>
-                    
                     <div id="ToDo">
                         <p>test</p>
                     </div>
                 </div>
-            </div> 
+                -->
+            </div>
         </div>
         <div id="link">
             <a href="https://github.com/GeneZijlboot/Project-To-Do-List" id="MadeBy">Copyright © Gene Zijlmans</a>

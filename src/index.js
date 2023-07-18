@@ -1,1 +1,2 @@
-console.log('test');
+import { Website } from "./Website";
+Website();
