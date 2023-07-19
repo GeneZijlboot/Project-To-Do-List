@@ -3,6 +3,7 @@ export function AddProject(){
     const TaskBar = document.getElementById('TaskBar');
     const Projects = document.createElement('p');
     Projects.textContent = "To Do List";
+    Projects.style = "font-size: 30px;"
 
     TaskBar.appendChild(Projects);
     /*

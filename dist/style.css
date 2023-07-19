@@ -11,9 +11,9 @@ body{
 
 #Screen{
     display: grid;
-    grid-template-columns: 0.8fr 3fr;
+    grid-template-columns: 1.12fr 3fr;
     height: 550px;
-    width: 900px;
+    width: 990px;
     box-shadow: 5px 5px 12px #042937;
     border-radius: 25px;
     background-color:#2596be;
@@ -21,11 +21,10 @@ body{
 
 #TaskBar{
     background-color: #2084a8;
-    padding-left: 25px;
+    padding-left: 20px;
     border-start-start-radius: 25px;
     border-end-start-radius: 25px;
     color: snow;
-    font-size: 30px;
 }
 
 #AddTaskButton{
@@ -59,12 +58,11 @@ body{
     background-color: snow;
     box-shadow: 2px 3px 5px #042937;
     border-radius: 25px;
-    max-width: 200px;
-    max-height: 200px;
+    width: 180px;
+    height: 200px;
     padding: 10px;
     overflow: hidden;
     overflow-y: scroll;
-    overflow-x: scroll;
 }
 
 #NewTask{
@@ -72,8 +70,7 @@ body{
     color: white;
     border-radius: 25px;
     text-align: center;
-    align-self: center;
-    margin-left: 240px;
+    margin-top: 55px;
     padding: 10px;
     width: 200px;
     height: 260px;

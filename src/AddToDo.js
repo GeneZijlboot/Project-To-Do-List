@@ -1,8 +1,7 @@
+const TaskBar = document.getElementById('TaskBar');
 const SubmitButton = document.createElement('input');
 const Form = document.createElement('form');
-const Screen = document.getElementById('Screen');
-const ToDoNotes = document.createElement("div");
-ToDoNotes.id = ToDoNotes;
+const ToDoNotes = document.getElementById('ToDoNotes');
 
 SubmitButton.type = "submit";
 SubmitButton.style = "cursor: pointer;";
@@ -65,7 +64,6 @@ High.textContent = "High";
 
 //function for making the text and add a "ToDo" button
 export function AddToDo(){
-    const TaskBar = document.getElementById('TaskBar');
     const AddToDo = document.createElement('button');
 
     AddToDo.id = "AddTaskButton";
@@ -73,14 +71,15 @@ export function AddToDo(){
     AddToDo.textContent = "+ AddToDo";
 
     TaskBar.appendChild(AddToDo);
-
 }
 
 //function for the form of the "ToDo"
 export function ToDoForm(){
     const AddToDobtn = document.getElementById('AddTaskButton');
+
     AddToDobtn.addEventListener('click', () => {
-        Screen.appendChild(NewTask);
+        TaskBar.appendChild(NewTask);
+        
         NewTask.appendChild(Form);
         Form.appendChild(txt);
         Form.appendChild(Title);
@@ -100,7 +99,7 @@ export function ToDoForm(){
         Form.appendChild(brFOUR);
         Form.appendChild(SubmitButton);       
         AddToDobtn.disabled = true;
-})
+    });
 }
 
 //function for every div of the "ToDo"
@@ -116,9 +115,11 @@ export function ToDoDiv(){
     }
 
     function render(){
+        ToDoNotes.innerHTML = "";
         for(let i = 0; i < ToDo.length; i++){
             let A = ToDo[i];
-            ToDoNotes.innerHTML = `
+            let B = document.createElement("div");
+            B.innerHTML = `
                 <div id="ToDo">
                     <p><strong>Title: </strong>${A.Title}<p>
                     <p><strong>Description: </strong>${A.Description}<p>
@@ -126,8 +127,7 @@ export function ToDoDiv(){
                     <p><strong>Priority: </strong>${A.Priority2}<p>
                 </div>
             `;
-            Screen.appendChild(ToDoNotes);
-            Screen.removeChild(NewTask);
+            ToDoNotes.appendChild(B);
             AddToDobtn.disabled = false;
         }
     }
