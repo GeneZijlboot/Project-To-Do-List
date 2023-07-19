@@ -2,15 +2,18 @@ export function AddProject(){
 
     const TaskBar = document.getElementById('TaskBar');
     const Projects = document.createElement('p');
-    const AddTaskButton = document.createElement('button')
+    Projects.textContent = "To Do List";
+
+    TaskBar.appendChild(Projects);
+    /*
+    const AddTaskButton = document.createElement('button');
     const Form = document.createElement('form');
     const resetbtn = document.createElement('button');
-    
 
     AddTaskButton.id = "AddTaskButton";
     Form.id = "AddProjectFrom";
 
-    Projects.textContent = "Projects";
+    
     AddTaskButton.textContent = "+ Add Project";
 
     TaskBar.appendChild(Projects);
@@ -51,4 +54,5 @@ export function AddProject(){
         TaskBar.removeChild(Form);
         AddProject.disabled = false;
     })
+    */
 }
