@@ -78,8 +78,8 @@ export function AddToDo(){
 
 //function for the form of the "ToDo"
 export function ToDoForm(){
-    const AddToDo = document.getElementById('AddTaskButton');
-    AddToDo.addEventListener('click', () => {
+    const AddToDobtn = document.getElementById('AddTaskButton');
+    AddToDobtn.addEventListener('click', () => {
         Screen.appendChild(NewTask);
         NewTask.appendChild(Form);
         Form.appendChild(txt);
@@ -98,16 +98,14 @@ export function ToDoForm(){
         Priority2.appendChild(Medium);
         Priority2.appendChild(High);
         Form.appendChild(brFOUR);
-        Form.appendChild(SubmitButton);
-
-        console.log('test');        
-        
-        AddToDo.disabled = true;
+        Form.appendChild(SubmitButton);       
+        AddToDobtn.disabled = true;
 })
 }
 
 //function for every div of the "ToDo"
 export function ToDoDiv(){
+    const AddToDobtn = document.getElementById('AddTaskButton');
     let ToDo = [];
 
     function ToDoItem(Title, Description, DueDate2, Priority2) {
@@ -122,32 +120,31 @@ export function ToDoDiv(){
             let A = ToDo[i];
             ToDoNotes.innerHTML = `
                 <div id="ToDo">
-                    <p>test</p>
-                    <p>${A.Title}<p>
-                    <p>${A.Description}<p>
-                    <p>${A.DueDate2}<p>
-                    <p>${A.Priority2}<p>
+                    <p><strong>Title: </strong>${A.Title}<p>
+                    <p><strong>Description: </strong>${A.Description}<p>
+                    <p><strong>DueDate: </strong>${A.DueDate2}<p>
+                    <p><strong>Priority: </strong>${A.Priority2}<p>
                 </div>
             `;
             Screen.appendChild(ToDoNotes);
             Screen.removeChild(NewTask);
+            AddToDobtn.disabled = false;
         }
     }
 
-    function AddToDo(){
+    function AddToDodiv(){
         const Title = document.getElementById('Title').value;
-        const Description = document.getElementById('Title').value;
-        const DueDate2 = document.getElementById('Title').value;
-        const Priority2 = document.getElementById('Title').value;
+        const Description = document.getElementById('Description').value;
+        const DueDate2 = document.getElementById('DueDate').value;
+        const Priority2 = document.getElementById('Priority').value;
 
-        let newToDo = new ToDoDiv(Title, Description, DueDate2, Priority2)
+        let newToDo = new ToDoItem(Title, Description, DueDate2, Priority2)
         ToDo.push(newToDo);
         render();
     }
 
     SubmitButton.addEventListener('click', (e) => {
         e.preventDefault();
-        console.log(Title.value, Description.value, DueDate2.value, Priority2.value);
-        AddToDo();
+        AddToDodiv();
     })
 }
