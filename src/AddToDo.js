@@ -79,7 +79,6 @@ export function ToDoForm(){
 
     AddToDobtn.addEventListener('click', () => {
         TaskBar.appendChild(NewTask);
-        
         NewTask.appendChild(Form);
         Form.appendChild(txt);
         Form.appendChild(Title);
@@ -97,7 +96,7 @@ export function ToDoForm(){
         Priority2.appendChild(Medium);
         Priority2.appendChild(High);
         Form.appendChild(brFOUR);
-        Form.appendChild(SubmitButton);       
+        Form.appendChild(SubmitButton);
         AddToDobtn.disabled = true;
     });
 }
